@@ -1,0 +1,16 @@
+{
+    "contents" : "## The following pair of functions cache the inverse of a matrix.\n\n\n## Creates a \"special\" matrix object than cache its inverse\n\nmakeCacheMatrix <- function(x = matrix()) {\n        s<-NULL\n        set<- function(y) {\n                x<<- y\n                m<<- NULL\n        }\n        get <- function() x\n        setsolve<- function(solve) s<<- solve\n        getsolve<- function() s\n        lis(set = set,get=get,\n            setsolve=setsolve,\n            getsolve=getsolve)\n}\n\n## computes the inverse of the special \"matrix\" returned\n\ncacheSolve <- function(x, ...) {\n        s <- x$getsolve()\n        if(!is.null(s)) {\n                message(\"getting cached data\")\n                return(s)\n        }\n        matriz <- x$get()\n        s <- solve(matriz, ...)\n        x$setsolve(s)\n        s\n}",
+    "created" : 1416752407990.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4189485669",
+    "id" : "ABA61B02",
+    "lastKnownWriteTime" : 1416754144,
+    "path" : "C:/Users/Lico/Dropbox/WD_R/localrepo/ProgrammingAssignment2/cachematrix.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

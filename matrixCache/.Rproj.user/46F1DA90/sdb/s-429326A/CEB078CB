@@ -1,0 +1,16 @@
+{
+    "contents" : "makeVector<- function(x=numeric()) {\n        m<-NULL\n        set <- function(y) {\n                x<<- y\n                m<<-NULL\n        }\n        get <- function() x\n        setmean<- function(mean) m<<- mean\n        getmean <- function() m\n        list(set = set, get=get,\n             setmean=setmean,\n             getmean=getmean)\n}\n\ncachemean <- function(x, ...) {\n        m <- x$getmean()\n        if(!is.null(m)) {\n                message(\"getting cached data\")\n                return(m)\n        }\n        data <- x$get()\n        m <- mean(data, ...)\n        x$setmean(m)\n        m\n}\n\ncachemean(c(1:1000))\n\n",
+    "created" : 1416752767475.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3325217137",
+    "id" : "CEB078CB",
+    "lastKnownWriteTime" : 1416719260,
+    "path" : "C:/Users/Lico/Dropbox/WD_R/makeVector.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}

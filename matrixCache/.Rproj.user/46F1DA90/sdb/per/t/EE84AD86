@@ -1,0 +1,16 @@
+{
+    "contents" : "## Put comments here that give an overall description of what your\n## functions do\n\n## Creates a \"special\" matrix\n\nmakeCacheMatrix <- function(x = matrix()) {\n\n}\n\n\n## Write a short comment describing this function\n\ncacheSolve <- function(x, ...) {\n        ## Return a matrix that is the inverse of 'x'\n}\n\n\n\nmatrix(1:4, 2,2)-> m1\nm1\nsolve(m1)\n",
+    "created" : 1416752146107.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2473775715",
+    "id" : "EE84AD86",
+    "lastKnownWriteTime" : 1416752567,
+    "path" : "C:/Users/Lico/Dropbox/WD_R/localrepo/ProgrammingAssignment2/cachematrix.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "source_on_save" : false,
+    "type" : "r_source"
+}
